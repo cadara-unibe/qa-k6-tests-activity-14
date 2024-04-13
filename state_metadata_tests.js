@@ -29,3 +29,11 @@ export default function () {
     errorRate.add(!result);
     sleep(1);  // simulate a think time of 1 second.
 }
+
+export function handleSummary(data) {
+    var script_name = document.currentScript.src.split('/').pop();
+    var report_name = `${script_name}_${report}`;
+    return {
+        report_name: htmlReport(data, { debug: true })
+    };
+}
