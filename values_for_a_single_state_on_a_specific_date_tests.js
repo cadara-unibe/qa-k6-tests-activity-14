@@ -23,4 +23,8 @@ export default function () {
         'is status 200': (r) => r.status === 200,
         'is data for CA on specific date present': (r) => r.json().state === 'CA' && r.json().date === 20210101,
     });
+
+    // Record the error if the check fails
+    errorRate.add(!result);
+    sleep(1);  // simulate a think time of 1 second.
 }
