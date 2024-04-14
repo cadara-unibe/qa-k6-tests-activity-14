@@ -19,12 +19,11 @@ let errorRate = new Rate('errors');
 
 export default function () {
     const res = http.get('https://api.covidtracking.com/v1/states/ca/info.json');
-    check(res, {
+    const result = check(res, {
         'is status 200': (r) => r.status === 200,
         'is data for CA present': (r) => r.json().state === 'CA',
     });
 
-    // Record the error if the check fails
     errorRate.add(!result);
     sleep(1);  // simulate a think time of 1 second.
 }
