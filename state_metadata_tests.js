@@ -32,9 +32,7 @@ export default function () {
 }
 
 export function handleSummary(data) {
-    var script_name = 'state_metadata_tests';
-    var report_name = `${script_name}_report.html`;
     return {
-        report_name: htmlReport(data, { debug: true })
+        'state_metadata_tests.html': htmlReport(data, { debug: true })
     };
 }

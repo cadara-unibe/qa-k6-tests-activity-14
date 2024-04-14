@@ -31,10 +31,8 @@ export default function () {
 }
 
 export function handleSummary(data) {
-    var script_name = 'current_values_for_all_states';
-    var report_name = `${script_name}_report.html`;
     return {
-        report_name: htmlReport(data, { debug: true })
+        'current_values_for_all_states.html': htmlReport(data, { debug: true })
     };
 }
 

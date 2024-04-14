@@ -30,9 +30,7 @@ export default function () {
 }
 
 export function handleSummary(data) {
-    var script_name = 'metadata_about_a_specific_state_tests';
-    var report_name = `${script_name}_report.html`;
     return {
-        report_name: htmlReport(data, { debug: true })
+        'metadata_about_a_specific_state_tests.html': htmlReport(data, { debug: true })
     };
 }

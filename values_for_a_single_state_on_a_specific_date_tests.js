@@ -31,9 +31,7 @@ export default function () {
 }
 
 export function handleSummary(data) {
-    var script_name = 'values_for_a_single_state_on_a_specific_date_tests';
-    var report_name = `${script_name}_report.html`;
     return {
-        report_name: htmlReport(data, { debug: true })
+        'values_for_a_single_state_on_a_specific_date_tests.html': htmlReport(data, { debug: true })
     };
 }

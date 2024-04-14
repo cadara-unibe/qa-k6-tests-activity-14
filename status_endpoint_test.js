@@ -31,9 +31,7 @@ export default function () {
 }
 
 export function handleSummary(data) {
-    var script_name = 'status_endpoint_test';
-    var report_name = `${script_name}_report.html`;
     return {
-        report_name: htmlReport(data, { debug: true })
+        'status_endpoint_test.html': htmlReport(data, { debug: true })
     };
 }
